@@ -1,0 +1,18 @@
+{
+    "name": "remove_backup",
+    "description": "Remove existing backup",
+    "version": 1,
+    "tasks": [{
+            "name": "remove",
+            "taskReferenceName": "remove",
+            "type": "SIMPLE",
+            "inputParameters": {
+                "backupName": "${workflow.input.backupName}",
+                "dataId": "${workflow.input.dataId}",
+                "workerConfig": "${workflow.input.workerConfig}"
+            }
+        }
+    ],
+    "restartable": true,
+    "schemaVersion": 2
+}

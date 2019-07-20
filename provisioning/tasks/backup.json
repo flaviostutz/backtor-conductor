@@ -1,0 +1,24 @@
+[
+    {
+        "name": "backup",
+        "retryCount": 5,
+
+        "timeoutSeconds": 86400,
+        "inputKeys": [
+            "backupName",
+            "workerConfig"
+        ],
+        "outputKeys": [
+            "dataId",
+            "dataSizeMB"
+        ],
+        "timeoutPolicy": "TIME_OUT_WF",
+        "retryLogic": "FIXED",
+        "retryDelaySeconds": 600,
+        "responseTimeoutSeconds": 86400,
+        "concurrentExecLimit": 300,
+        "rateLimitFrequencyInSeconds": 60,
+        "rateLimitPerFrequency": 50
+    }
+]
+

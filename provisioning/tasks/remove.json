@@ -1,20 +1,21 @@
 [
     {
-        "name": "encode",
-        "retryCount": 3,
+        "name": "remove",
+        "retryCount": 5,
 
         "timeoutSeconds": 360,
         "inputKeys": [
-            "fileLocation"
+            "backupName",
+            "dataId",
+            "workerConfig"
         ],
         "outputKeys": [
-            "encodeLocation"
         ],
-        "timeoutPolicy": "TIME_OUT_WF",
+        "timeoutPolicy": "RETRY",
         "retryLogic": "FIXED",
-        "retryDelaySeconds": 30,
+        "retryDelaySeconds": 600,
         "responseTimeoutSeconds": 120,
-        "concurrentExecLimit": 100,
+        "concurrentExecLimit": 300,
         "rateLimitFrequencyInSeconds": 60,
         "rateLimitPerFrequency": 50
     }

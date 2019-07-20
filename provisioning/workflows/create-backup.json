@@ -1,0 +1,21 @@
+{
+    "name": "create_backup",
+    "description": "Creates a new backup",
+    "version": 1,
+    "tasks": [{
+            "name": "backup",
+            "taskReferenceName": "backup",
+            "type": "SIMPLE",
+            "inputParameters": {
+                "backupName": "${workflow.input.backupName}",
+                "workerConfig": "${workflow.input.workerConfig}"
+            }
+        }
+    ],
+    "outputParameters": {
+        "dataId": "${backup.output.dataId}",
+        "dataSizeMB": "${backup.output.dataSizeMB}"
+    },
+    "restartable": true,
+    "schemaVersion": 2
+}
