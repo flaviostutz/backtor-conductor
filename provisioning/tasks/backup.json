@@ -6,6 +6,7 @@
         "timeoutSeconds": 86400,
         "inputKeys": [
             "backupName",
+            "timeoutSeconds",
             "workerConfig"
         ],
         "outputKeys": [
